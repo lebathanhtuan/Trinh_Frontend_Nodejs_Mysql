@@ -1,9 +1,9 @@
 
 
-function Container() {
+function DefaultContent() {
     return (<div>
-        Default Container
+        Default DefaultContent
     </div>  );
 }
 
-export default Container;
+export default DefaultContent;

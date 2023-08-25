@@ -11,7 +11,6 @@ export function ModalEditProduct(props) {
 
   useEffect(() => {
     if (props.currentProduct) {
-      // take data form props productManager
       const { id, title, discount, image, price, description } =
         props.currentProduct;
       setId(id);

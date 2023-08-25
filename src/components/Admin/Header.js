@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import "./admin.scss";
 
 function Header({ activeTab, onTabChange }) {
@@ -26,6 +26,7 @@ function Header({ activeTab, onTabChange }) {
         </Link>
       </div>
     </div>
+
   );
 }
 
