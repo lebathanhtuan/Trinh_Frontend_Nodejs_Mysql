@@ -7,6 +7,9 @@ import App from "./App";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import DefaultContent from "./components/DefaultContent";
 import Login from "./components/Login";
+import About from "./components/About";
+import Notify from "./components/Notify";
+import Support from "./components/Support";
 
 const store = createStore(rootReducer);
 
@@ -19,6 +22,9 @@ ReactDOM.render(
           <Route path="/" element={<App />} >
             <Route index element={<DefaultContent />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/about" element={<About/>} />
+            <Route path="/notify" element={<Notify />} />
+            <Route path="/support" element={<Support/>} />
           </Route>
 
         </Routes>

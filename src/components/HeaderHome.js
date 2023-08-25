@@ -11,9 +11,9 @@ const HeaderHome = () => {
   return (
     <div className="container-headerhome">
       <nav>
-        <div>ABOUT ME</div>
-        <div>SUPPORT</div>
-        <div>NOTIFICATION</div>
+        <div><Link to="/about">About me</Link></div>
+        <div><Link to="/support">Support</Link></div>
+        <div><Link to="/notify">NOTIFICATION</Link></div>
 
      </nav>
       <h1 className="title-main">Shop Game VN</h1>

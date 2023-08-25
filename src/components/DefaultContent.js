@@ -2,7 +2,7 @@
 
 function DefaultContent() {
     return (<div>
-        Default DefaultContent
+        Đang hoàn thiện
     </div>  );
 }
 
