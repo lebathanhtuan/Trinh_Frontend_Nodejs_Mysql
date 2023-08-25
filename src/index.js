@@ -10,7 +10,7 @@ import Login from "./components/Login";
 import About from "./components/About";
 import Notify from "./components/Notify";
 import Support from "./components/Support";
-
+import Admin from "./components/Admin/index.js";
 const store = createStore(rootReducer);
 
 ReactDOM.render(
@@ -26,6 +26,8 @@ ReactDOM.render(
             <Route path="/notify" element={<Notify />} />
             <Route path="/support" element={<Support/>} />
           </Route>
+
+          <Route path="/admin" element={<Admin/>}></Route>
 
         </Routes>
       </BrowserRouter>
