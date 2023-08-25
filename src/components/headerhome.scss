@@ -1,0 +1,23 @@
+.container-headerhome {
+  height: 20vh;
+  background-color: aqua;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  .title-main {
+    font-size: 30px;
+    font-weight: bold;
+    color: red;
+  }
+  
+  .btn {
+    width: 80px;
+    height: 40px;
+    background-color: black;
+    text-align: center;
+    a {
+      text-decoration: none;
+    }
+  }
+}
