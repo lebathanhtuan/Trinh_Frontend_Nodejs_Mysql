@@ -10,7 +10,7 @@ const App = () => {
   
   return (
     <div>
-      {userInfo && userInfo.role_id ? (
+      {userInfo && userInfo.role_id === "1" ? (
         <Admin />
       ) : (
         <div>
