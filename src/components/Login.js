@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import { loginSuccess } from "../redux/actions";
 import "../style/login.scss";
 import { handleLoginAPI, seviceCreateUser } from "../services/userService";
@@ -13,6 +14,7 @@ const Login = () => {
   const [formLogin, setFormLogin] = useState(true);
   const dispatch = useDispatch();
   const [confirmPassword, setConfirmPassword] = useState("");
+  const navigate = useNavigate();
 
   const handleRegister = async () => {
     if (username !== "" || password !== "" || confirmPassword !== "") {
@@ -37,7 +39,8 @@ const Login = () => {
     if (username !== "" && password !== "") {
       let res = await handleLoginAPI({ email: username, password });
       if (res.message === "Ok") {
-        dispatch(loginSuccess(res.user));
+        await dispatch(loginSuccess(res.user));
+        await navigate('/')
       }
     } else {
       alert("Plz, fill full the information !!!");
