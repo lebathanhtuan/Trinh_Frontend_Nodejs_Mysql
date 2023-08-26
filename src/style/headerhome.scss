@@ -23,6 +23,7 @@
     }
     .active a {
       color: whitesmoke;
+      text-shadow: 4px 4px 4px blue;
     }
   }
 
@@ -37,9 +38,21 @@
   }
   .btn.active {
     background-color: blue;
+    box-shadow: 4px 0px 5px white;
     a{
       color: whitesmoke !important;
       font-weight: bold;
+    }
+  }
+  .btn.logout{
+    background-color: rgb(168, 61, 35);
+    padding-left: 7px;
+    a{
+      color: black;
+      font-weight: bold;
+    }
+    &:hover{
+      opacity: 0.7;
     }
   }
 }

@@ -12,7 +12,9 @@ const HeaderHome = () => {
 
   const [activeTab, setActiveTab] = useState("trangchu");
 
+ 
   const handleLogout = () => {
+    setActiveTab("trangchu")
     dispatch(logout());
   };
 
@@ -59,7 +61,7 @@ const HeaderHome = () => {
             <p style={{ fontSize: "20px", color: "white" }} className="Btn">
               Welcome, {userInfo.email}
             </p>
-            <p onClick={handleLogout} className="btn">
+            <p onClick={handleLogout} className="btn logout">
               <Link to="/">LOGOUT</Link>
             </p>
           </div>
