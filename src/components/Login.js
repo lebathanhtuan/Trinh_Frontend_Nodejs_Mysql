@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { loginSuccess } from "../redux/actions";
 import "./login.scss";
 import { handleLoginAPI, seviceCreateUser } from "../services/userService";
-import { Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
 const Login = () => {
