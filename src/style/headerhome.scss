@@ -10,7 +10,17 @@
     font-weight: bold;
     color: red;
   }
-  
+  nav {
+    display: flex;
+     a{
+      margin: 0 20px;
+      text-decoration: none;
+        &:hover{
+          color : whitesmoke
+        }
+     }
+  }
+
   .btn {
     width: 80px;
     height: 40px;
@@ -20,4 +30,10 @@
       text-decoration: none;
     }
   }
+
+}
+.scroll{
+  background-color: blueviolet;
+  font-weight: bold;
+  color: whitesmoke;
 }

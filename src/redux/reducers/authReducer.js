@@ -19,8 +19,7 @@ const authReducer = (state = initialState, action) => {
         isLoggedIn: true,
         userInfo: action.payload,
       };
-    case actionTypes.USER_LOGIN_FAIL:
-    case actionTypes.PROCESS_LOGOUT:
+      case actionTypes.PROCESS_LOGOUT:
       // Xóa thông tin đăng nhập khỏi localStorage
       localStorage.removeItem('userData');
       return {

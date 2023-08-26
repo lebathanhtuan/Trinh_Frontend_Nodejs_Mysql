@@ -37,7 +37,7 @@ const Admin = () => {
   };
 
   return (
-    <div>
+    <div className="admin-container">
       <Header activeTab={activeTab} onTabChange={handleTabChange} />
       {activeTab === "users" ? (
         <UserManager list={listUsers} getDataToSate={getDataToSateListUsers}></UserManager>

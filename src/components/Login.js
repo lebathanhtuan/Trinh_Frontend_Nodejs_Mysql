@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { loginSuccess } from "../redux/actions";
-import "./login.scss";
+import "../style/login.scss";
 import { handleLoginAPI, seviceCreateUser } from "../services/userService";
 import { Link } from "react-router-dom";
 
