@@ -3,9 +3,13 @@ import { useDispatch, useSelector } from "react-redux";
 import { loginSuccess } from "../redux/actions";
 import "./login.scss";
 import { handleLoginAPI, seviceCreateUser } from "../services/userService";
-import { Link, Navigate ,Redirect} from "react-router-dom";
+import { useHistory} from "react-router-dom";
+
+
 const Login = () => {
+  const history = useHistory();
   const isLoggedIn = useSelector((state) => state.auth.isLoggedIn);
+  const userInfo = useSelector((state) => state.auth.userInfo);
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [formLogin, setFormLogin] = useState(true);
@@ -36,9 +40,13 @@ const Login = () => {
       let res = await handleLoginAPI({ email: username, password });
       if (res.message === "Ok") {
         dispatch(loginSuccess(res.user));
-          if (isLoggedIn) {
-            alert("Go Home :(((")
+        if (isLoggedIn) {
+          if(userInfo.role_id === 1 ){
+            history.push("/admin")
+          }else{
+            history.push("/home")
           }
+        }
       }
     } else {
       alert("Plz, fill full the information !!!");
@@ -47,6 +55,8 @@ const Login = () => {
 
   return (
     <div className="wrapper1">
+      {console.log(isLoggedIn)}
+      {console.log(userInfo)}
       <div className="login-container">
         <h2>{formLogin ? "Login Page" : "Register Page"}</h2>
         <input

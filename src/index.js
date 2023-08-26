@@ -4,7 +4,7 @@ import { createStore } from "redux";
 import { Provider } from "react-redux";
 import rootReducer from "./redux/reducers/rootReducer";
 import App from "./App";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes  } from "react-router-dom";
 import DefaultContent from "./components/DefaultContent";
 import Login from "./components/Login";
 import About from "./components/About";

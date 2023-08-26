@@ -2,7 +2,7 @@
 
 function DefaultContent() {
     return (<div>
-        Đang hoàn thiện
+        Trang home đang hoàn thiện
     </div>  );
 }
 

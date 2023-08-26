@@ -12,7 +12,7 @@ const authReducer = (state = initialState, action) => {
       return {
         ...state,
         isLoggedIn: true,
-        userInfo: action.userInfo,
+        userInfo: action.payload,
       };
     case actionTypes.USER_LOGIN_FAIL:
       return {
