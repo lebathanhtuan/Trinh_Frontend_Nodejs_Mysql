@@ -40,7 +40,7 @@ const Login = () => {
       if (res.message === "Ok") {
         dispatch(loginSuccess(res.user));
         if (isLoggedIn) {
-          if(userInfo.role_id === 1 ){
+          if(userInfo.role_id === "1" ){
             <Link to="/admin"></Link>
           }else{
             <Link to="/home"></Link>
