@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { loginSuccess } from "../redux/actions";
 import "../style/login.scss";
 import { handleLoginAPI, seviceCreateUser } from "../services/userService";
-import { Link } from "react-router-dom";
 
 
 const Login = () => {
@@ -39,13 +38,6 @@ const Login = () => {
       let res = await handleLoginAPI({ email: username, password });
       if (res.message === "Ok") {
         dispatch(loginSuccess(res.user));
-        if (isLoggedIn) {
-          if(userInfo.role_id === "1" ){
-            <Link to="/admin"></Link>
-          }else{
-            <Link to="/home"></Link>
-          }
-        }
       }
     } else {
       alert("Plz, fill full the information !!!");
@@ -57,7 +49,7 @@ const Login = () => {
       {console.log(isLoggedIn)}
       {console.log(userInfo)}
       <div className="login-container">
-        <h2>{formLogin ? "Login Page" : "Register Page"}</h2>
+        <h2>{formLogin ? "Login" : "Register"}</h2>
         <input
           type="text"
           placeholder="Username"

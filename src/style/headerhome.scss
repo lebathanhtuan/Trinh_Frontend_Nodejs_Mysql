@@ -12,13 +12,17 @@
   }
   nav {
     display: flex;
-     a{
+    font-weight: bold;
+    a {
       margin: 0 20px;
       text-decoration: none;
-        &:hover{
-          color : whitesmoke
-        }
-     }
+      &:hover {
+        color: whitesmoke;
+      }
+    }
+    .active a {
+      color: whitesmoke;
+    }
   }
 
   .btn {
@@ -30,9 +34,8 @@
       text-decoration: none;
     }
   }
-
 }
-.scroll{
+.scroll {
   background-color: blueviolet;
   font-weight: bold;
   color: whitesmoke;
