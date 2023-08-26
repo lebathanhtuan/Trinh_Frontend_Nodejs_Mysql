@@ -1,4 +1,49 @@
+.mod-container {
+  height: 70vh;
 
-.mod-container{
-    height: 70vh;
+  .title {
+    // margin-right: 100px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    animation: toggleColor 3s infinite;
+  }
+
+  @keyframes toggleColor {
+    0% {
+      color: aqua;
+    }
+    25% {
+      color: blueviolet;
+    }
+    50% {
+      color: tomato;
+    }
+    75% {
+      color: springgreen;
+    }
+    100% {
+      color: red;
+    }
+  }
+
+  .version-mod {
+    .font-l {
+      font-size: 50px;
+    }
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    .child-mod {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .description{
+        margin-top: 10px;
+      }
+    }
+    .android {
+    //   margin-left: 50px;
+    }
+  }
 }
