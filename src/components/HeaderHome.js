@@ -64,7 +64,12 @@ const HeaderHome = () => {
             </p>
           </div>
         ) : (
-          <p className="btn">
+          <p
+            onClick={() => {
+              setActiveTab("islogin");
+            }}
+            className={`btn ${activeTab === "islogin" ? "active" : ""}`}
+          >
             <Link to="/login">Log In</Link>.
           </p>
         )}

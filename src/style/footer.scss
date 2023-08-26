@@ -1,8 +1,13 @@
-
-
-
-
-.footer-container{
-    height: 20vh;
-    border: 1px solid #ccc;
+.footer-container {
+  height: 20vh;
+  border: 1px solid #ccc;
+  text-align: center;
+  .title {
+    color: whitesmoke;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .description {
+    font-style: italic;
+  }
 }
