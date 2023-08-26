@@ -3,11 +3,10 @@ import { useDispatch, useSelector } from "react-redux";
 import { loginSuccess } from "../redux/actions";
 import "./login.scss";
 import { handleLoginAPI, seviceCreateUser } from "../services/userService";
-import { useHistory} from "react-router-dom";
+import { Link} from "react-router-dom";
 
 
 const Login = () => {
-  const history = useHistory();
   const isLoggedIn = useSelector((state) => state.auth.isLoggedIn);
   const userInfo = useSelector((state) => state.auth.userInfo);
   const [username, setUsername] = useState("");
@@ -42,9 +41,9 @@ const Login = () => {
         dispatch(loginSuccess(res.user));
         if (isLoggedIn) {
           if(userInfo.role_id === 1 ){
-            history.push("/admin")
+            <Link to="/admin"></Link>
           }else{
-            history.push("/home")
+            <Link to="/home"></Link>
           }
         }
       }
